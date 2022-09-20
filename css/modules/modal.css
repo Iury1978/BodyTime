@@ -1,0 +1,177 @@
+.modal {
+  margin: auto;
+  padding: 40px 0;
+  cursor: default;
+  visibility: hidden;
+  opacity: 0;
+  width: 512px;
+  transition-property: opacity, visibility;
+  transition-timing-function: 5s ease-in-out;
+}
+
+.modal_open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__container {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 72px 58px;
+}
+
+.modal__title {
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.modal__person {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin-bottom: 40px;
+}
+
+.modal__input {
+  border: 0.5px solid #B2B2B2;
+  border-radius: 4px;
+  width: 396px;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.modal__input::placeholder {
+  font-size: 14px;
+  line-height: 120%;
+  display: flex;
+  color: #828282;
+}
+
+
+.modal__checkbox {
+  display: flex;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__label {
+  position: relative;
+  font-size: 12px;
+  line-height: 150%;
+  color: #363431;
+  left: 32px;
+}
+
+.checkbox__label::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8125 4.5V19.5C20.8121 19.848 20.6737 20.1816 20.4276 20.4276C20.1816 20.6737 19.848 20.8121 19.5 20.8125H4.5C4.15203 20.8121 3.81842 20.6737 3.57236 20.4276C3.32631 20.1816 3.1879 19.848 3.1875 19.5V4.5C3.1879 4.15203 3.32631 3.81842 3.57236 3.57236C3.81842 3.32631 4.15203 3.1879 4.5 3.1875H19.5C19.848 3.1879 20.1816 3.32631 20.4276 3.57236C20.6737 3.81842 20.8121 4.15203 20.8125 4.5ZM19.6875 4.5C19.6875 4.45029 19.6677 4.40262 19.6325 4.36747C19.5974 4.33232 19.5497 4.31255 19.5 4.3125H4.5C4.45029 4.31255 4.40262 4.33232 4.36747 4.36747C4.33232 4.40262 4.31255 4.45029 4.3125 4.5V19.5C4.31255 19.5497 4.33232 19.5974 4.36747 19.6325C4.40262 19.6677 4.45029 19.6875 4.5 19.6875H19.5C19.5497 19.6875 19.5974 19.6677 19.6325 19.6325C19.6677 19.5974 19.6875 19.5497 19.6875 19.5V4.5Z' fill='%2374B900'/%3E%3Cpath d='M19.6875 4.5C19.6875 4.45029 19.6677 4.40262 19.6325 4.36747C19.5974 4.33232 19.5497 4.31255 19.5 4.3125H4.5C4.45029 4.31255 4.40262 4.33232 4.36747 4.36747C4.33232 4.40262 4.31255 4.45029 4.3125 4.5V19.5C4.31255 19.5497 4.33232 19.5974 4.36747 19.6325C4.40262 19.6677 4.45029 19.6875 4.5 19.6875H19.5C19.5497 19.6875 19.5974 19.6677 19.6325 19.6325C19.6677 19.5974 19.6875 19.5497 19.6875 19.5V4.5Z' fill='%2374B900'/%3E%3C/svg%3E%0A");
+  width: 24px;
+  height: 24px;
+  left: -32px;
+  text-align: center;
+  text-indent: 0px;
+  vertical-align: middle;
+}
+
+.checkbox__input:checked+.checkbox__label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8125 4.5V19.5C20.8121 19.848 20.6737 20.1816 20.4276 20.4276C20.1816 20.6737 19.848 20.8121 19.5 20.8125H4.5C4.15203 20.8121 3.81842 20.6737 3.57236 20.4276C3.32631 20.1816 3.1879 19.848 3.1875 19.5V4.5C3.1879 4.15203 3.32631 3.81842 3.57236 3.57236C3.81842 3.32631 4.15203 3.1879 4.5 3.1875H19.5C19.848 3.1879 20.1816 3.32631 20.4276 3.57236C20.6737 3.81842 20.8121 4.15203 20.8125 4.5ZM19.6875 4.5C19.6875 4.45029 19.6677 4.40262 19.6325 4.36747C19.5974 4.33232 19.5497 4.31255 19.5 4.3125H4.5C4.45029 4.31255 4.40262 4.33232 4.36747 4.36747C4.33232 4.40262 4.31255 4.45029 4.3125 4.5V19.5C4.31255 19.5497 4.33232 19.5974 4.36747 19.6325C4.40262 19.6677 4.45029 19.6875 4.5 19.6875H19.5C19.5497 19.6875 19.5974 19.6677 19.6325 19.6325C19.6677 19.5974 19.6875 19.5497 19.6875 19.5V4.5Z' fill='%2374B900'/%3E%3Cpath d='M19.6875 4.5C19.6875 4.45029 19.6677 4.40262 19.6325 4.36747C19.5974 4.33232 19.5497 4.31255 19.5 4.3125H4.5C4.45029 4.31255 4.40262 4.33232 4.36747 4.36747C4.33232 4.40262 4.31255 4.45029 4.3125 4.5V19.5C4.31255 19.5497 4.33232 19.5974 4.36747 19.6325C4.40262 19.6677 4.45029 19.6875 4.5 19.6875H19.5C19.5497 19.6875 19.5974 19.6677 19.6325 19.6325C19.6677 19.5974 19.6875 19.5497 19.6875 19.5V4.5Z' fill='%2374B900'/%3E%3Cpath d='M16.6495 9.54683C16.6228 9.47794 16.5829 9.41499 16.5319 9.36155C16.4288 9.25367 16.2871 9.19112 16.138 9.18765C15.9889 9.18419 15.8445 9.2401 15.7366 9.34308L10.625 14.2224L8.26329 11.9681C8.15504 11.8669 8.01126 11.8126 7.86318 11.8168C7.7151 11.8211 7.57466 11.8835 7.47237 11.9907C7.37009 12.0979 7.3142 12.2411 7.31686 12.3892C7.31952 12.5373 7.38051 12.6784 7.48657 12.7818L10.2366 15.4068C10.3413 15.5067 10.4804 15.5624 10.625 15.5624C10.7696 15.5624 10.9087 15.5067 11.0134 15.4068L16.5133 10.1568C16.5667 10.1058 16.6096 10.0448 16.6395 9.97723C16.6693 9.90967 16.6856 9.83688 16.6873 9.76303C16.689 9.68918 16.6762 9.61572 16.6495 9.54683Z' fill='white'/%3E%3C/svg%3E%0A");
+
+}
+
+.modal__order {
+  display: block;
+  width: 241px;
+  height: 56px;
+  color: #74B900;
+  border: 1px solid #74B900;
+  background: #FFFFFF;
+  border-radius: 16px;
+  margin: 0 auto;
+  transition-property: background-color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modal__order:hover {
+  background-color: #74B900;
+  color: #FFFFFF;
+}
+
+.modal__close {
+  position: absolute;
+  display: block;
+  top: -44px;
+  right: 0px;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  line-height: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+@media (max-width: 320px) {
+  .modal {
+    width: 288px;
+  }
+
+  .modal__container {
+    padding: 48px 24px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .modal__person {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .modal__input {
+    width: 240px;
+    height: 48px;
+  }
+
+  .modal__input::placeholder {
+    font-size: 12px;
+  }
+
+  .modal__checkbox {
+    width: 240px;
+  }
+
+  .checkbox__label {
+    font-size: 10px;
+  }
+
+  .modal__order {
+    width: 184px;
+    height: 48px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .modal__close {
+    top: -32px;
+  }
+
+}

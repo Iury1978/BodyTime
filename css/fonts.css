@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "VantaLight";
+  src: 
+    url("../fonts/vanta-light/VantaLight.woff") format("woff"),
+
+    url("../fonts/vanta-light/VantaLight.woff2") format("woff2");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Vanta";
+  src: url("../fonts/vanta-medium/vanta-medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/vanta-medium/vanta-medium.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/vanta-medium/vanta-medium.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/vanta-medium/vanta-medium.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/vanta-medium/vanta-medium.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/vanta-medium/vanta-medium.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/vanta-medium/vanta-medium.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
