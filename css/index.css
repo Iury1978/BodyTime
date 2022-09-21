@@ -4,10 +4,10 @@
 @import "./variables.css";
 
 @import "./modules/header.css";
-@import "./modules/hero.css";
-@import "./modules/about.css";
-@import "./modules/we-help.css";
-@import "./modules/stock.css";
+@import "./modules/index/hero.css";
+@import "./modules/index/about.css";
+@import "./modules/index/we-help.css";
+@import "./modules/index/stock.css";
 @import "./modules/footer.css";
 
 @import "./modules/modal.css";

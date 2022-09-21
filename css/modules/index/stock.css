@@ -125,7 +125,7 @@
   left: auto;
 }
 
-@media (max-width:320px) {
+@media (max-width:425px) {
   .stock__container {
     padding: 72px 16px;
   }
