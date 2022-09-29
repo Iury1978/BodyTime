@@ -1,0 +1,34 @@
+.breadcrumb {
+  display: flex;
+  margin-bottom: 112px;
+}
+
+.breadcrumb__item:first-child ::after {
+  content: "—";
+  margin: 0 7px;
+}
+
+.breadcrumb__item:last-child {
+  color: #74B900;
+  pointer-events: none;
+}
+
+.breadcrumb__item:last-child::after {
+  visibility: hidden;
+}
+
+@media (max-width: 425px) {
+  .breadcrumb {
+    display: flex;
+    margin-bottom: 72px;
+  }
+
+  .breadcrumb__item {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .breadcrumb__item:first-child ::after {
+    margin: 0 5px;
+  }
+}

@@ -6,6 +6,7 @@
 .stock__title {
   position: relative;
   font-family: 'Vanta';
+  font-weight: 400;
   font-size: 48px;
   line-height: 46px;
   text-align: center;
@@ -36,6 +37,7 @@
 
 .slide__title {
   font-family: 'Vanta';
+  font-weight: 400;
   font-size: 32px;
   line-height: 130%;
   margin-bottom: 24px;
@@ -69,13 +71,7 @@
 }
 
 .slide__more::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  bottom: -6px;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid var(--black);
+  
 }
 
 #swiper-pagination {

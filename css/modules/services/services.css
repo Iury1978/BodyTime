@@ -1,0 +1,291 @@
+.services__container {
+  padding-top: 24px;
+}
+
+.services__title {
+  font-family: 'Vanta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 46px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services__filter {
+  display: none;
+}
+
+.services__mobile {
+  display: none;
+}
+
+.services__forms {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.services__choice {
+  display: flex;
+  gap: 24px;
+}
+
+.services__select {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 0 48px 0 24px;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  appearance: none;
+  /* overflow: hidden; */
+  background: url("../../../img/arrow-label-down.svg") no-repeat right;
+  background-position-x: right;
+  background-position-x: calc(100% - 16px);
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 476px;
+}
+
+.search__label {
+  flex-grow: 1;
+}
+
+.search__input {
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #828282;
+  display: none;
+}
+
+.search__input_active {
+  display: block;
+}
+
+.search__button {
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+}
+
+.services__flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 176px;
+}
+
+.card__article {
+  display: block;
+  width: 784px;
+  height: 752px;
+  background-color: #F9F9F9;
+  border-radius: 16px;
+}
+
+.card__img {
+  display: block;
+  width: 784px;
+  height: 456px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.card__info {
+  padding: 48px;
+}
+
+.card__title {
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  margin-bottom: 24px;
+}
+
+.card__text {
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+
+.card__text:last-child {
+  margin-bottom: 0;
+}
+
+.card__old-price {
+  font-size: 16px;
+  line-height: 20.8px;
+  text-decoration: line-through;
+}
+
+.card__link-price {
+  position: relative;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.card__link-price::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid var(--black);
+}
+
+
+
+@media (max-width: 425px) {
+  .services__container {
+    padding-top: 24px;
+  }
+
+  .services__title {
+    font-size: 28px;
+    line-height: 27px;
+    margin-bottom: 40px;
+  }
+
+  .services__choice {
+    display: none;
+  }
+
+  .services__forms {
+    position: relative;
+  }
+
+  .services__mobile_active {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 136px;
+    padding: 16px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    border-radius: 4px;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .services__item-link {
+    position: relative;
+    display: block;
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  .services__item-mobile {
+    position: relative;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+  }
+
+  .services__item-link {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .services__item-mobile:not(:last-child):after {
+    position: absolute;
+    content: "";
+    width: 104px;
+    height: 1px;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    outline: none;
+    border: none;
+    background-color: #828282;
+    transform: scaleY(0.2);
+  }
+
+  .services__filter {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+  }
+
+
+  .services__filter_disable {
+    display: none;
+  }
+
+
+
+  .search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search__input {
+    height: 32px;
+    font-size: 12px;
+    line-height: 12px;
+
+  }
+
+  .search__button {
+    height: 32px;
+    width: 32px;
+  }
+
+  .services__flex-wrapper {
+    gap: 24px;
+    margin-bottom: 0px;
+  }
+
+  .card__article {
+    width: 100%;
+    height: 408px;
+  }
+
+  .card__img {
+    width: 100%;
+    height: 216px;
+  }
+
+  .card__info {
+    padding: 24px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__text {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .card__old-price {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+
+  .card__link-price {
+    font-size: 14px;
+    line-height: 170%;
+  }
+
+  .card__link-price::after {
+    bottom: -4px;
+  }
+}

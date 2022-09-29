@@ -4,10 +4,13 @@
 @import "./variables.css";
 
 @import "./modules/header.css";
+@import "./modules/footer.css";
+@import "./modules/modal.css";
+@import "./modules/breadcrumb.css";
+
 @import "./modules/index/hero.css";
 @import "./modules/index/about.css";
 @import "./modules/index/we-help.css";
 @import "./modules/index/stock.css";
-@import "./modules/footer.css";
 
-@import "./modules/modal.css";
+@import "./modules/services/services.css";

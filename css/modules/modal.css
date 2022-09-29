@@ -6,7 +6,7 @@
   opacity: 0;
   width: 512px;
   transition-property: opacity, visibility;
-  transition-timing-function: 5s ease-in-out;
+  transition-timing-function:  ease-in-out;
 }
 
 .modal_open {

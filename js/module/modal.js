@@ -3,6 +3,11 @@ const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modal__close");
 
+setTimeout(() => {
+  overlay.style.transitionDuration = "0.36s";
+  modal.style.transitionDuration = "0.36s";
+}, 360);
+
 heroBtn.addEventListener("click", () => {
   overlay.classList.add("overlay_open");
   modal.classList.add("modal_open");
@@ -13,7 +18,6 @@ heroBtn.addEventListener("click", () => {
 });
 
 overlay.addEventListener("click", (event) => {
-  console.log(event);
   const target = event.target;
 
   if (target === overlay || target.closest(".modal__close")) {
@@ -27,3 +31,4 @@ overlay.addEventListener("click", (event) => {
     window.scrollTo(0, parseInt(scrollY || "0") * -1);
   }
 });
+

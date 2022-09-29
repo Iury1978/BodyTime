@@ -4,6 +4,7 @@
   grid-template-columns: auto 376px 376px;
   grid-template-rows: 200px 88px;
   column-gap: 168px;
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footer__items {
@@ -119,6 +120,7 @@
     padding: 40px 16px;
     column-gap: 0px;
     row-gap: 40px;
+    box-shadow: none;
   }
 
   .footer__link {
