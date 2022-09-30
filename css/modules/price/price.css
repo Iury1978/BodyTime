@@ -52,6 +52,11 @@
   background-color: transparent;
 }
 
+.price__button-text {
+  width: 760px;
+  text-align: start;
+}
+
 .price__button_plus:after {
   content: "";
   width: 24px;
@@ -86,6 +91,10 @@
   line-height: 130%;
 }
 
+.price__type {
+  width: 712px;
+}
+
 .price__text {
   font-size: 16px;
   line-height: 130%;
@@ -94,4 +103,54 @@
 
 .price__text:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 425px) {
+  .price__container {
+    padding: 0px 16px 72px 16px;
+  }
+
+  .price__title {
+    font-size: 28px;
+    line-height: 27px;
+    margin-bottom: 40px;
+  }
+
+  .price__items {
+    margin-bottom: 24px;
+  }
+
+  .price__index {
+    font-size: 14px;
+    line-height: 130%;
+    padding: 24px;
+  }
+
+  .price__button {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .price__button-text {
+    width: 196px;
+  }
+
+  .price__dropdown {
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .price__desc {
+    font-size: 12px;
+  }
+
+  .price__type {
+    width: 120px;
+  }
+
+  .price__text {
+    font-size: 12px;
+    line-height: 170%;
+  }
+
 }
