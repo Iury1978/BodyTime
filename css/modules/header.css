@@ -149,7 +149,7 @@
     top: 130px;
     height: 350px;
     width: 288px;
-    transform: translateX(0);
+    transform:  translateX(0);
     background: #FFFFFF;
     border-radius: 16px;
     flex-direction: column;

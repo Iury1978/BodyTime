@@ -1,5 +1,6 @@
-.breadcrumb {
+.breadcrumb_items {
   display: flex;
+  margin-top: 24px;
   margin-bottom: 112px;
 }
 
@@ -18,7 +19,7 @@
 }
 
 @media (max-width: 425px) {
-  .breadcrumb {
+  .breadcrumb_items {
     display: flex;
     margin-bottom: 72px;
   }
