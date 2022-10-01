@@ -223,12 +223,9 @@
     line-height: 0;
   }
 
-
   .services__filter_disable {
     display: none;
   }
-
-
 
   .search {
     width: 100%;
@@ -239,7 +236,6 @@
     height: 32px;
     font-size: 12px;
     line-height: 12px;
-
   }
 
   .search__button {
