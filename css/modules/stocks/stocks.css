@@ -1,0 +1,217 @@
+.course__container {
+  max-width: 1388px;
+  padding: 0 30px 176px 30px;
+  margin: 0 auto;
+}
+
+.course__title {
+  width: 784px;
+  font-family: 'Vanta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0 auto 176px;
+}
+
+.course__text-wrap {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 120px;
+}
+
+.course__text {
+  flex: 50%;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.course__text-green {
+  color: #74B900;
+}
+
+.course__text-red {
+  color: #FF5E7E;
+}
+
+.course__img {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 16px;
+  background: linear-gradient(303.09deg, rgba(174, 180, 174, 0.4) 1.06%, rgba(174, 180, 174, 0.337231) 19.68%, rgba(174, 180, 174, 0) 38.26%, rgba(174, 180, 174, 0) 53.32%), linear-gradient(106.53deg, rgba(174, 180, 174, 0.4) 14.63%, rgba(149, 154, 149, 0.342432) 38.26%, rgba(97, 100, 97, 0.223159) 60.96%, rgba(0, 0, 0, 0) 77.35%, rgba(174, 180, 174, 0) 77.35%), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../img/course__pic.jpg");
+}
+
+.course__wrap-text {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+}
+
+.course__desc {
+  max-width: 568px;
+  font-family: 'Vanta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 130%;
+  color: #FFF;
+  text-shadow: 0px 4px 56px rgba(0, 0, 0, 0.25);
+  margin-bottom: 48px;
+}
+
+.course__phone-wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.course__phone {
+  font-family: 'Vanta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 23px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 56px rgba(0, 0, 0, 0.25);
+}
+
+.course__whatsapp {
+  color: #00E676;
+}
+
+.program__title {
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 176px;
+}
+
+.block__left {
+  padding: 80px 72px 80px 80px;
+  width: 784px;
+  background-color: #E2F0CA;
+  border-radius: 16px;
+}
+
+.block__right {
+  padding: 80px 72px 80px 80px;
+  width: 784px;
+  background-color: #F3F3F3;
+  border-radius: 16px;
+}
+
+.block__title {
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  margin-bottom: 48px;
+
+}
+
+.block__text {
+  position: relative;
+  margin-left: 48px;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+
+.block__text:last-child {
+  margin-bottom: 0;
+}
+
+.block__text_left::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #74B900;
+  left: -48px;
+}
+
+.block__text_right::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F58CA1;
+  left: -48px;
+}
+
+.course-price {
+  display: flex;
+  gap: 32px;
+  padding: 80px 136px 80px 80px;
+  margin-bottom: 176px;
+  max-width: 1056px;
+  background-color: #F58CA1;
+  border-radius: 16px;
+}
+
+.course-price__title {
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  color: #FFFFFF;
+  text-align: start;
+}
+
+.course-price__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.course-price__price {
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.course-price__text {
+  position: relative;
+  font-size: 14px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-left: 23px;
+}
+
+.course-price__text::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #74B900;
+  left: -23px;
+}
+
+.course-price__btn {
+  width: 314px;
+  height: 64px;
+  font-family: 'Vanta';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #74B900;
+  border: none;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
