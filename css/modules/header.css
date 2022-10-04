@@ -55,6 +55,10 @@
   border: none;
 }
 
+.navigation__link_active {
+pointer-events: none;
+}
+
 .navigation__link_active::after {
   width: 100%;
   opacity: 1;
@@ -199,6 +203,7 @@
 
   .navigation__link_active {
     background-color: rgb(225, 230, 235);
+    pointer-events: none;
   }
 
   .navigation__link::after {

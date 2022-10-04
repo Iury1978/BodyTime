@@ -19,6 +19,10 @@
   text-transform: uppercase;
 }
 
+.footer__link_active {
+  text-decoration-line: none;
+  pointer-events: none;
+}
 
 .footer__about-title {
   line-height: 16px;
