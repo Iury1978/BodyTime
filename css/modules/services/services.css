@@ -1,7 +1,3 @@
-.services__container {
-  padding-top: 24px;
-}
-
 .services__title {
   font-family: 'Vanta';
   font-style: normal;
@@ -87,17 +83,26 @@
 
 .card__article {
   display: block;
-  width: 784px;
+  max-width: 784px;
   height: 752px;
+  flex-basis: 550px;
+  flex-grow: 1;
   background-color: #F9F9F9;
   border-radius: 16px;
 }
 
+.card__link {
+  line-height: 0;
+
+}
+
 .card__img {
   display: block;
-  width: 784px;
+  object-fit: cover;
+  width: 100%;
   height: 456px;
   border-radius: 16px 16px 0px 0px;
+
 }
 
 .card__info {
@@ -144,13 +149,12 @@
   border-bottom: 1px solid var(--black);
 }
 
-
-
 @media (max-width: 425px) {
   .services__container {
-    padding-top: 24px;
+    padding-left: 0;
+    padding-right: 0;
   }
-
+  
   .services__title {
     font-size: 28px;
     line-height: 27px;
@@ -163,6 +167,9 @@
 
   .services__forms {
     position: relative;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .services__mobile_active {
