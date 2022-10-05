@@ -1,7 +1,9 @@
+.breadcrumb {
+  padding: 24px 160px 112px;
+}
+
 .breadcrumb_items {
   display: flex;
-  margin-top: 24px;
-  margin-bottom: 112px;
 }
 
 .breadcrumb__item:first-child ::after {
@@ -19,9 +21,8 @@
 }
 
 @media (max-width: 425px) {
-  .breadcrumb_items {
-    display: flex;
-    margin-bottom: 72px;
+  .breadcrumb {
+    padding: 16px 16px 72px;
   }
 
   .breadcrumb__item {
