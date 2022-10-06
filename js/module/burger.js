@@ -3,7 +3,7 @@ const burger = document.querySelector(".burger");
 const burgerClose = document.querySelector(".burger__close");
 
 mobileBurger.addEventListener("click", () => {
-  burger.classList.add("burger_active");
+  burger.classList.toggle("burger_active");
 });
 
 burgerClose.addEventListener("click", () => {
