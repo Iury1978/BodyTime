@@ -2,6 +2,7 @@ let searchButton = document.querySelector(".search__button");
 let searchInput = document.querySelector(".search__input");
 let servicesFilter = document.querySelector(".services__filter");
 let servicesMobile = document.querySelector(".services__mobile");
+
 if (searchButton) {
   const toggleFilterButton = () => {
     servicesFilter.classList.toggle("services__filter_disable");
@@ -14,11 +15,14 @@ if (searchButton) {
   };
 
   searchButton.addEventListener("click", (e) => {
-    e.stopPropagation();
-
-    toggleSearchButton();
-    if (document.body.clientWidth <= 425) {
-      toggleFilterButton();
+    if (servicesMobile.classList.contains("services__mobile_active")) {
+      toggleServicesFilter();
+    } else {
+      e.stopPropagation();
+      toggleSearchButton();
+      if (document.body.clientWidth <= 425) {
+        toggleFilterButton();
+      }
     }
   });
   servicesFilter.addEventListener("click", (e) => {
@@ -44,7 +48,6 @@ if (searchButton) {
     let servicesMobile_is_active = servicesMobile.classList.contains(
       "services__mobile_active"
     );
-
     if (!its_searchButton && !its_servicesMobile && servicesMobile_is_active) {
       toggleServicesFilter();
     }
