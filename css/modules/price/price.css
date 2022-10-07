@@ -169,7 +169,7 @@
     gap: 5px;
   }
 
-  .price__button-disabled-01:after {
+  /* .price__button-disabled-01:after {
     width: 65px;
   }
 
@@ -179,7 +179,7 @@
 
   .price__button-disabled-03:after {
     width: 65px;
-  }
+  } */
 
   .price__wrapper {
     gap: 8px;
