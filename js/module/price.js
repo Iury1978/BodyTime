@@ -1,4 +1,4 @@
-const hide = (elem, priceDropdown) => {
+const hide = (elem, priceDropdown, priceButtonIcon) => {
   if (
     !elem.classList.contains("price__item_show") ||
     elem.classList.contains("collapsing")
@@ -10,19 +10,24 @@ const hide = (elem, priceDropdown) => {
   priceDropdown.style.height = 0;
   priceDropdown.style.overflow = "hidden";
   priceDropdown.style.transition = "height 360ms ease-in-out";
+  priceButtonIcon.style.transition = "360ms ease-in-out";
 
   elem.classList.remove("price__item_show");
   elem.classList.add("collapsing");
+  priceButtonIcon.classList.add("collapsing");
+  priceButtonIcon.classList.remove("price__button-icon_minus");
+
   setTimeout(() => {
     priceDropdown.style.display = "";
     priceDropdown.style.height = "";
     priceDropdown.style.overflow = "";
     priceDropdown.style.transition = "";
     elem.classList.remove("collapsing");
+    priceButtonIcon.classList.remove("collapsing");
   }, 360);
 };
 
-const show = (elem, priceDropdown) => {
+const show = (elem, priceDropdown, priceButtonIcon) => {
   if (
     elem.classList.contains("price__item_show") ||
     elem.classList.contains("collapsing")
@@ -38,39 +43,43 @@ const show = (elem, priceDropdown) => {
   priceDropdown.style.overflow = "hidden";
   //  прописываем анимацию
   priceDropdown.style.transition = "height 360ms ease-in-out";
+  priceButtonIcon.style.transition = "360ms ease-in-out";
   //  это нужно для нбольшого сброса внутри расчетов браузера
   priceDropdown.offsetHeight;
   //  и прописываем полученную высоту
   priceDropdown.style.height = `${height}px`;
 
+  elem.classList.add("price__item_show");
   elem.classList.add("collapsing");
-
+  priceButtonIcon.classList.add("collapsing");
+  priceButtonIcon.classList.add("price__button-icon_minus");
   // обнуляем назад
   setTimeout(() => {
-    elem.classList.add("price__item_show");
     priceDropdown.style.display = "";
     priceDropdown.style.height = "";
     priceDropdown.style.overflow = "";
     priceDropdown.style.transition = "";
     elem.classList.remove("collapsing");
+    priceButtonIcon.classList.remove("collapsing");
   }, 360);
 };
 
 export const accordion = () => {
   const list = document.querySelector(".price__items");
   list.addEventListener("click", (e) => {
-    const button = e.target.closest(".price__button");
-    if (button) {
-      const item = button.closest(".price__item");
+    const buttons = e.target.closest(".price__buttons");
+
+    if (buttons) {
+      const item = buttons.closest(".price__item");
       const priceDropdown = item.querySelector(".price__dropdown");
+      const priceButtonIcon = item.querySelector(".price__button-icon");
 
-      button.classList.toggle("price__button_minus");
-      // item.classList.toggle("price__item_show");
+      // priceButtonIcon.classList.toggle("price__button-icon_minus");
+
       // для плавности
-
       item.classList.contains("price__item_show")
-        ? hide(item, priceDropdown)
-        : show(item, priceDropdown);
+        ? hide(item, priceDropdown, priceButtonIcon)
+        : show(item, priceDropdown, priceButtonIcon);
     }
   });
 };
