@@ -1,5 +1,6 @@
 .breadcrumb {
-  padding: 24px 160px 112px;
+  padding-top: 24px;
+  padding-bottom: 112px;
 }
 
 .breadcrumb__items {
@@ -22,7 +23,8 @@
 
 @media (max-width: 425px) {
   .breadcrumb {
-    padding: 16px 16px 72px;
+    padding-top: 16px;
+    padding-bottom: 72px;
   }
 
   .breadcrumb__item {
