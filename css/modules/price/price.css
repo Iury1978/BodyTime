@@ -135,7 +135,23 @@
   display: none;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1440px) {
+  .price__container {
+    padding: 0 100px 176px 100px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .price__container {
+    padding: 0 40px 176px 40px;
+  }
+
+  .price__button {
+    width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
   .price__container {
     padding: 0px 16px 72px 16px;
   }
