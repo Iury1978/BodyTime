@@ -48,6 +48,17 @@
   height: 608px;
 }
 
+@media (max-width: 1300px) {
+  .contacts__container {
+    padding: 0 0 80px 50px;
+  }
+}
+
+@media (max-width: 815px) {
+  .column {
+    flex-wrap: wrap;
+  }
+}
 
 @media (max-width: 425px) {
   .contacts__container {
