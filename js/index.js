@@ -6,6 +6,6 @@ import "./module/search.js";
 // import "./module/price.js";
 import "./module/contacts-map.js";
 
-import { accordion } from "./module/price.js";
+// import { accordion } from "./module/price.js";
 
-accordion();
+// accordion();
