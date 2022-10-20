@@ -5,7 +5,7 @@
 }
 
 .course__title {
-  width: 784px;
+  max-width: 784px;
   font-family: 'Vanta';
   font-style: normal;
   font-weight: 400;
@@ -14,6 +14,8 @@
   text-align: center;
   margin: 0 auto;
   padding-bottom: 176px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .course__text-wrap {
@@ -41,7 +43,7 @@
   width: 100%;
   height: 520px;
   border-radius: 16px;
-  background: linear-gradient(303.09deg, rgba(174, 180, 174, 0.4) 1.06%, rgba(174, 180, 174, 0.337231) 19.68%, rgba(174, 180, 174, 0) 38.26%, rgba(174, 180, 174, 0) 53.32%), linear-gradient(106.53deg, rgba(174, 180, 174, 0.4) 14.63%, rgba(149, 154, 149, 0.342432) 38.26%, rgba(97, 100, 97, 0.223159) 60.96%, rgba(0, 0, 0, 0) 77.35%, rgba(174, 180, 174, 0) 77.35%), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../img/course__pic.jpg");
+  background: linear-gradient(303.09deg, rgba(174, 180, 174, 0.4) 1.06%, rgba(174, 180, 174, 0.337231) 19.68%, rgba(174, 180, 174, 0) 38.26%, rgba(174, 180, 174, 0) 53.32%), linear-gradient(106.53deg, rgba(174, 180, 174, 0.4) 14.63%, rgba(149, 154, 149, 0.342432) 38.26%, rgba(97, 100, 97, 0.223159) 60.96%, rgba(0, 0, 0, 0) 77.35%, rgba(174, 180, 174, 0) 77.35%), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../img/course__pic.jpg") right;
 }
 
 .course__wrap-text {
@@ -176,6 +178,7 @@
   line-height: 130%;
   color: #FFFFFF;
   text-align: start;
+  max-width: 400px;
 }
 
 .course-price__desc {
@@ -223,67 +226,7 @@
   border-radius: 8px;
 }
 
-@media (max-width: 425px) {
-
-  .course__container {
-    max-width: 425px;
-    padding: 0 16px 76px 16px;
-    margin: 0 auto;
-  }
-
-  .course__title {
-    width: 100%;
-    font-size: 28px;
-    padding-bottom: 76px;
-  }
-
-  .course__text-wrap {
-    flex-direction: column;
-    margin-bottom: 70px;
-  }
-
-  .course__text {
-    font-size: 18px;
-    line-height: 170%;
-  }
-
-  .course__img {
-    height: 220px;
-  }
-
-  .course__wrap-text {
-    position: absolute;
-    top: 30px;
-    left: 10px;
-  }
-
-  .course__desc {
-    max-width: 350px;
-    font-size: 22px;
-    margin-bottom: 18px;
-    padding: 0 5px;
-  }
-
-  .course__phone-wrap {
-    gap: 8px;
-    padding: 0 5px;
-  }
-
-  .course__phone {
-    font-size: 18px;
-  }
-
-  .course__whatsapp {
-    width: 30px;
-    height: 30px;
-  }
-
-  .program__title {
-    width: 100%;
-    font-size: 28px;
-    margin-bottom: 76px;
-  }
-
+@media (max-width: 1440px) {
   .block {
     display: flex;
     flex-direction: column;
@@ -325,6 +268,144 @@
     height: 20px;
     left: -44px;
   }
+}
+
+@media (max-width: 840px) {
+
+  .course-price_wrap {
+    gap: 32px;
+    padding: 40px 40px 40px 40px;
+    margin-bottom: 36px;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  .course-price__title {
+    font-size: 28px;
+    max-width: 200px;
+  }
+
+  .course-price__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .course-price__price {
+    font-size: 22px;
+  }
+
+  .course-price__text {
+    font-size: 12px;
+  }
+
+  .course-price__text::before {
+    width: 10px;
+    height: 10px;
+    left: -21px;
+  }
+
+  .course-price__btn {
+    width: 250px;
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 780px) {
+  .course__title {
+    font-size: 36px;
+    padding-bottom: 76px;
+
+  }
+
+  .course__text-wrap {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .course__text {
+    flex: 100%;
+  }
+
+  .course__wrap-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .course__desc {
+    max-width: 450px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .course__container {
+    max-width: 650px;
+    padding: 0 16px 76px 16px;
+    margin: 0 auto;
+  }
+
+  .course__title {
+    width: 100%;
+    font-size: 28px;
+    padding-bottom: 76px;
+  }
+
+  .course__text-wrap {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  .course__text {
+    font-size: 18px;
+    line-height: 170%;
+  }
+
+  .course__img {
+    height: 220px;
+    width: 100%;
+    background: linear-gradient(303.09deg, rgba(174, 180, 174, 0.4) 1.06%, rgba(174, 180, 174, 0.337231) 19.68%, rgba(174, 180, 174, 0) 38.26%, rgba(174, 180, 174, 0) 53.32%), linear-gradient(106.53deg, rgba(174, 180, 174, 0.4) 14.63%, rgba(149, 154, 149, 0.342432) 38.26%, rgba(97, 100, 97, 0.223159) 60.96%, rgba(0, 0, 0, 0) 77.35%, rgba(174, 180, 174, 0) 77.35%), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../../img/course__pic_mobile.jpg") right;
+  }
+
+  .course__wrap-text {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+
+  .course__desc {
+    max-width: 350px;
+    font-size: 22px;
+    margin-bottom: 18px;
+    padding: 0 5px;
+  }
+
+  .course__phone-wrap {
+    gap: 8px;
+    padding: 0 5px;
+  }
+
+  .course__phone {
+    font-size: 18px;
+  }
+
+  .course__whatsapp {
+    width: 30px;
+    height: 30px;
+  }
+
+  .program__title {
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 76px;
+  }
 
   .course-price_wrap {
     flex-direction: column;
@@ -336,6 +417,7 @@
 
   .course-price__title {
     font-size: 28px;
+
   }
 
   .course-price__desc {
