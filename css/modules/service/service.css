@@ -107,6 +107,7 @@
 }
 
 .service__foto {
+  display: block;
   border-radius: 16px;
   width: 100%;
   height: 100%;
@@ -252,7 +253,6 @@
 
 
   .service__foto {
-    display: block;
     border-radius: 8px;
   }
 
