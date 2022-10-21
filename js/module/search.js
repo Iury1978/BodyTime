@@ -2,8 +2,7 @@ let searchButton = document.querySelector(".search__button");
 let searchInput = document.querySelector(".search__input");
 let servicesFilter = document.querySelector(".services__filter");
 let servicesMobile = document.querySelector(".services__mobile");
-
-if (searchButton) {
+try {
   const toggleFilterButton = () => {
     servicesFilter.classList.toggle("services__filter_disable");
   };
@@ -42,7 +41,6 @@ if (searchButton) {
       toggleSearchButton();
       toggleFilterButton();
     }
-
     let its_servicesMobile =
       target == servicesMobile || servicesMobile.contains(target);
     let servicesMobile_is_active = servicesMobile.classList.contains(
@@ -52,4 +50,5 @@ if (searchButton) {
       toggleServicesFilter();
     }
   });
+} catch (error) {
 }

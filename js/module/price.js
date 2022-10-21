@@ -1,3 +1,4 @@
+
 const hide = (elem, priceDropdown, priceButtonIcon) => {
   if (
     !elem.classList.contains("price__item_show") ||
