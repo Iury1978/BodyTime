@@ -35,9 +35,7 @@
 
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="./services.html" class="navigation__link navigation__link_active">Наши
-                услуги</a>
-            </li>
+            <li class="navigation__item"><a href="./services.html" class="navigation__link">Наши услуги</a></li>
             <li class="navigation__item"><a href="./stocks.html" class="navigation__link">Акции</a></li>
             <li class="navigation__item"><a href="./price.html" class="navigation__link">Прайс</a></li>
             <li class="navigation__item"><a href="./contacts.html" class="navigation__link">Контакты</a></li>
@@ -89,264 +87,65 @@
     <div class="container breadcrumb">
       <ul class="breadcrumb__items">
         <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">Главная</a></li>
-        <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Наши услуги</a></li>
+        <li class="breadcrumb__item"><a href="" class="breadcrumb__link">RF-лифтинг лица</a></li>
       </ul>
     </div>
-    <section class="services">
-      <div class="container services__container">
-        <h1 class="services__title">Наши услуги</h1>
-        <!-- непонятна задумка дизайнера-  селект- форма это, или радио-форма с картинками,
-           или просто графический элемент.
-          Пока делаю как форму без кнопки в  десктопной и как ссылки по странице в мобильном -->
-        <div class="services__forms">
-          <!-- кнопка для всплывающего меню в мобильной версии -->
-          <button class="services__filter" type="menu">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M18.6 23.4458L14.2 26.1958V17.887C14.2 17.4695 14.0549 17.065 13.7895 16.7427L4.11898 5H28.681L19.0105 16.7427C18.7451 17.065 18.6 17.4695 18.6 17.887V23.4458Z"
-                stroke="#828282" stroke-width="2" stroke-linejoin="round" />
-            </svg>
+    <section class="service">
+      <div class="container service__container">
+        <h1 class="service__title">RF-лифтинг лица</h1>
+        <div class="service__wrapper service-blocks">
+          <div class="service-blocks__text-01 service-desc">
+            <h2 class="service-desc__title">RF-лифтинг лица</h2>
+            <p class="service-desc__text">
+              С возрастом выработка коллагена снижается, кожа становится сухой, дряблой, появляются морщины. Справиться
+              с этой
+              напастью и помогает процедура радиоволнового лифтинга. Во время этой операции происходит воздействие
+              высокочастотного
+              электрического тока, проникающего в глубокие слои эпидермиса и стимулирующего выработку коллагена.
+            </p>
+            <p class="service-desc__text">Основными показаниями для проведения такой операции являются:</p>
+            <ul class="service-desc__items">
+              <li class="service-desc__item">возрастное изменение овала лица;</li>
+              <li class="service-desc__item">наличие глубоких мимических морщин;</li>
+              <li class="service-desc__item">фотостарение и сухость кожи;</li>
+              <li class="service-desc__item">потеря тонуса и увядание.</li>
+            </ul>
+            <button class="service-desc__btn" type="button">Обратный звонок</button>
+          </div>
 
-          </button>
-          <!-- всплывающее меню в мобильной версии -->
-          <ul class="services__mobile">
-            <li class="services__item-mobile"><a href="#!" class="services__item-link">Уход за лицом</a></li>
-            <li class="services__item-mobile"><a href="#!" class="services__item-link">Уход за телом</a></li>
-            <li class="services__item-mobile"><a href="#!" class="services__item-link">Ресницы</a></li>
-            <li class="services__item-mobile"><a href="#!" class="services__item-link">Эпиляция</a></li>
-          </ul>
-          <!-- форма выбора в десктопной версии -->
-          <form class="services__choice" id="select_choice" aria-label="выбор категории услуг">
-            <select class="services__select" name="face" id="face">
-              <option value="face1" selected>Уход за лицом</option>
-              <option value="face2">Уход за лицом2</option>
-              <option value="face3">Уход за лицом3</option>
-            </select>
-            <select class="services__select" name="body" id="body">
-              <option value="body1" selected>Уход за телом</option>
-              <option value="body2">Уход за телом2</option>
-              <option value="body3">Уход за телом3</option>
-            </select>
-            <select class="services__select" name="eyelashes" id="eyelashes">
-              <option value="eyelashes1" selected>Ресницы</option>
-              <option value="eyelashes2">Ресницы2</option>
-              <option value="eyelashes3">Ресницы3</option>
-            </select>
-            <select class="services__select" name="epilation" id="epilation">
-              <option value="epilation1" selected>Эпиляция</option>
-              <option value="epilation2">Эпиляция2</option>
-              <option value="epilation3">Эпиляция3</option>
-            </select>
-          </form>
-          <!-- форма поиска -->
-          <form class="services__search search" id="search">
-            <label class="search__label" aria-label="поиск по сайту">
-              <input class="search__input" type="search" name="search" placeholder="Поиск">
-            </label>
-            <button class="search__button" type="button" aria-label="найти услугу на сайте">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M38 38L31.3891 31.3773L38 38ZM35.0526 22.5263C35.0526 25.8485 33.7329 29.0346 31.3838 31.3838C29.0346 33.7329 25.8485 35.0526 22.5263 35.0526C19.2041 35.0526 16.018 33.7329 13.6689 31.3838C11.3197 29.0346 10 25.8485 10 22.5263C10 19.2041 11.3197 16.018 13.6689 13.6689C16.018 11.3197 19.2041 10 22.5263 10C25.8485 10 29.0346 11.3197 31.3838 13.6689C33.7329 16.018 35.0526 19.2041 35.0526 22.5263V22.5263Z"
-                  stroke="#828282" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
-          </form>
-        </div>
-        <!-- опять непонятна мысль дизайнера.
-        пока сделал  везде целые блокиссылкой, кроме где ссылка на прайс -->
-        <div class="services__flex-wrapper card">
-          <article id="RF-face-lifting" class="card__article">
-            <a href="./service_example-page.html" class="card__link">
-              <img src="./img/services_01.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">RF-лифтинг лица (тела)</h2>
-                <p class="card__text">1 сеанс - 1000 руб.</p>
-                <p class="card__text">4 сеанса - 3600 руб. <span class="card__old-price">4000 р.</span></p>
-                <p class="card__text">8 сеансов - 6400 руб.<span class="card__old-price">8000 р.</span></p>
-              </div>
-            </a>
-          </article>
-          <article id="ultrasonic-cavitation" class="card__article">
-            <a href="./service_example-page.html" class="card__link">
-              <img src="./img/services_02.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Ультрозвуковая кавитация</h2>
-                <p class="card__text">1 сеанс - 900 руб.</p>
-                <p class="card__text">4 сеанса - 3200 руб. <span class="card__old-price">4000 р.</span></p>
-                <p class="card__text">8 сеансов - 5600 руб.<span class="card__old-price">8000 р.</span></p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_03.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Миостимуляция тела</h2>
-                <p class="card__text">1 сеанс - 450 руб.</p>
-                <p class="card__text">5 сеансов - 2000 руб.<span class="card__old-price">2250 р.</span></p>
-                <p class="card__text">10 сеансов - 3000 руб.<span class="card__old-price">4500 р.</span></p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_04.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Миостимуляция лица </h2>
-                <p class="card__text">10 сеансов - 5000 руб.<span class="card__old-price">7000 р .</span></p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_05.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Прессотерапия</h2>
-                <p class="card__text">1 сеанс - 450 руб.</p>
-                <p class="card__text">5 сеансов - 2000 руб. <span class="card__old-price">2500 р .</span></p>
-                <p class="card__text">10 сеансов - 6400 руб.<span class="card__old-price">4500 р .</span></p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_06.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Вакуумно-баночный массаж</h2>
-                <p class="card__text">1 сеанс - 450 руб.</p>
-                <p class="card__text">5 сеансов - 2000 руб. <span class="card__old-price">2250 р .</span></p>
-                <p class="card__text">10 сеансов - 3000 руб.<span class="card__old-price">4500 р .</span></p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_07.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Вакуумно-роликовый массаж</h2>
-                <p class="card__text">1 сеанс - 600 руб.</p>
-                <p class="card__text">5 сеансов - 27500 руб. <span class="card__old-price">3000 р .</span></p>
-                <p class="card__text">10 сеансов - 5000 руб.<span class="card__old-price">6000 р .</span></p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_08.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Ламинирование ресниц</h2>
-                <p class="card__text">Снятие - 200 руб.</p>
-                <p class="card__text">Наращивание - 1500 руб.</p>
-                <p class="card__text">Ламинирование - 1500 руб. </p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_09.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Оформление и окрашивание бровей</h2>
-                <p class="card__text">Художественное оформление <br> и стойкое окрашивание - 700 руб.</p>
+          <div class="service__pic">
+            <picture>
+              <source media="(max-width: 425px)" srcset=".//img/img_service/mob/service_01_01-mob.jpg">
+              <img src=".//img/img_service/desktop/service_01_01.jpg" alt="" class="service__foto">
+            </picture>
+          </div>
+          <div class="service__pic">
+            <picture>
+              <source media="(max-width: 425px)" srcset=".//img/img_service/mob/service_02_01-mob.jpg">
+              <img src=".//img/img_service/desktop/service_02_01.jpg" alt="" class="service__foto">
+            </picture>
+          </div>
 
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <img src="./img/services_10.jpg" alt="девушка на процедурах" class="card__img">
-            <div class="card__info">
-              <h2 class="card__title">Лазерная эпиляция</h2>
-              <a href="./price.html" class="card__link-price">Прайс</a>
-            </div>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_11.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Фито-солевое обертывание</h2>
-                <p class="card__text ">90 мин / 2200 руб (размер 42 - 48)</p>
-                <p class="card__text">90 мин / 2700 руб (размер 50 - 54)</p>
-                <p class="card__text">90 мин / 3500 руб (размер 56 - 60)</p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_12.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Французский скульптурно-моделирующий массаж</h2>
-                <p class="card__text">1.5 ч. - 1800 руб .</p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_13.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Миостимуляция</h2>
-                <p class="card__text">1 сеанс - 450 руб.</p>
-                <p class="card__text">5 сеансов - 2000 руб.</p>
-                <p class="card__text">10 сеансов - 3000 руб.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_14.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Миостимуляция на спину</h2>
-                <p class="card__text">1 сеанс - 500 руб.</p>
-                <p class="card__text">5 сеансов - 2250 руб.</p>
-                <p class="card__text">10 сеансов - 4000 руб.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_15.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Обертывание в термоодеяле</h2>
-                <p class="card__text">1 сеанс - 750 руб.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_16.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Лазерное лечение (лицо)</h2>
-                <p class="card__text">Акне (легкой и средней тяжести) - от 500 руб.</p>
-                <p class="card__text">Повышенная жирность кожи - от 500 руб.</p>
-                <p class="card__text">Расширенные поры - от 500 руб.</p>
-              </div>
-            </a>
-          </article>
-          <article class="card__article">
-            <img src="./img/services_17.jpg" alt="девушка на процедурах" class="card__img">
-            <div class="card__info">
-              <h2 class="card__title">Лазерное омоложение</h2>
-              <a href="./price.html" class="card__link-price">Прайс</a>
-            </div>
-          </article>
-          <article class="card__article">
-            <a href="#!" class="card__link">
-              <img src="./img/services_18.jpg" alt="девушка на процедурах" class="card__img">
-              <div class="card__info">
-                <h2 class="card__title">Лазерное удаление</h2>
-                <p class="card__text">Купероз на лице - от 500 руб.</p>
-                <p class="card__text">Красные звездочки, сосудестая сетка - от 500 руб. .</p>
-              </div>
-            </a>
-          </article>
+          <div class="service-blocks__text-02 service-contra">
+            <h2 class="service-contra__title">Противопоказания</h2>
+            <ul class="service-contra__items">
+              <li class="service-contra__item">высокая чувствительность кожи и склонность к аллергическим реакциям;</li>
+              <li class="service-contra__item">большое количество родинок и пигментных пятен</li>
+              <li class="service-contra__item">мешки под глазами и нависающие веки;</li>
+              <li class="service-contra__item">атеросклероз и болезни нервной системы;</li>
+              <li class="service-contra__item">острые и хронические заболевания кожи;</li>
+              <li class="service-contra__item">онкология;</li>
+              <li class="service-contra__item">гипертония.</li>
+            </ul>
+          </div>
         </div>
       </div>
-
     </section>
   </main>
   <footer class="footer">
     <div class="container footer__container">
       <ul class="footer__items">
-        <li class="footer__item"><a href="./services.html" class="footer__link footer__link_active">Наши услуги</a>
-        </li>
+        <li class="footer__item"><a href="./services.html" class="footer__link">Наши услуги</a> </li>
         <li class="footer__item"><a href="./stocks.html" class="footer__link">Акции</a> </li>
         <li class="footer__item"><a href="./price.html" class="footer__link">Прайс</a> </li>
         <li class="footer__item"><a href="./contacts.html" class="footer__link">Контакты</a> </li>
@@ -439,7 +238,7 @@
       <p class="footer__confidential">*Политика конфиденциальности</p>
     </div>
   </footer>
-
+  </div>
 </body>
 
 </html>

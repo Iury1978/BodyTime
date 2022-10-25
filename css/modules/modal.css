@@ -127,7 +127,7 @@
   transition: color 0.2s ease-in-out;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .modal {
     width: 288px;
   }

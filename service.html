@@ -1,3 +1,6 @@
+<!-- эта заготовка для однотипных страниц. в проекте они  не совсем однотипные,
+  пока делаю просто ссылками на каждую отдельную страницу. -->
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -9,7 +12,7 @@
 
   <link rel="stylesheet" href="./css/index.css">
 
-  <!-- <script src="./js/index.js" type="module"></script> -->
+  <script src="./js/index.js" type="module"></script>
 </head>
 
 <body>
@@ -35,9 +38,7 @@
 
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="./services.html" class="navigation__link navigation__link_active">Наши
-                услуги</a>
-            </li>
+            <li class="navigation__item"><a href="./services.html" class="navigation__link">Наши услуги</a></li>
             <li class="navigation__item"><a href="./stocks.html" class="navigation__link">Акции</a></li>
             <li class="navigation__item"><a href="./price.html" class="navigation__link">Прайс</a></li>
             <li class="navigation__item"><a href="./contacts.html" class="navigation__link">Контакты</a></li>
@@ -87,12 +88,41 @@
   </header>
   <main>
     <div class="container breadcrumb">
-      <ul class="breadcrumb__items">
+      <ul class="breadcrumb__items breadcrumb__items_service">
         <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">Главная</a></li>
-        <li class="breadcrumb__item"><a href="" class="breadcrumb__link">RF-лифтинг лица</a></li>
+        <!-- <li class="breadcrumb__item"><a href="" class="breadcrumb__link"></a></li> -->
       </ul>
     </div>
     <section class="service">
+      <div class="container service__container">
+        <h1 class="service__title"></h1>
+        <div class="service__wrapper service-blocks">
+          <div class="service-blocks__text-01 service-desc">
+            <h2 class="service-desc__title"></h2>
+            <p class="service-desc__text"></p>
+            <ul class="service-desc__items">
+              <li class="service-desc__item"></li>
+            </ul>
+            <button class="service-desc__btn" type="button">Обратный звонок</button>
+          </div>
+
+          <div class="service__pic">
+            <img src="" alt="" class="service__foto">
+          </div>
+          <div class="service__pic">
+            <img src="" alt="" class="service__foto">
+          </div>
+
+          <div class="service-blocks__text-02 service-contra">
+            <h2 class="service-contra__title"></h2>
+            <ul class="service-contra__items">
+              <li class="service-contra__item"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="service">
       <div class="container service__container">
         <h1 class="service__title">RF-лифтинг лица</h1>
         <div class="service__wrapper service-blocks">
@@ -114,14 +144,14 @@
             </ul>
             <button class="service-desc__btn" type="button">Обратный звонок</button>
           </div>
-
+    
           <div class="service__pic">
             <img src=".//img/service_01_01.jpg" alt="" class="service__foto">
           </div>
           <div class="service__pic">
-            <img src=".//img/service_01_02.jpg" alt="" class="service__foto">
+            <img src="./img/service_01_02.jpg" alt="" class="service__foto">
           </div>
-
+    
           <div class="service-blocks__text-02 service-contra">
             <h2 class="service-contra__title">Противопоказания</h2>
             <ul class="service-contra__items">
@@ -136,7 +166,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
   <footer class="footer">
     <div class="container footer__container">

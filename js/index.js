@@ -5,7 +5,9 @@ import "./module/swiper.js";
 import "./module/search.js";
 
 import "./module/contacts-map.js";
-// import "./module/price.js";
+
+// import "./module/services.js";
+
 import { accordion } from "./module/price.js";
 
 try {
