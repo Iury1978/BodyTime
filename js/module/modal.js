@@ -1,42 +1,70 @@
-
-const heroBtn = document.querySelector(".hero__btn");
-const overlay = document.querySelector(".overlay");
-const modal = document.querySelector(".modal");
-const modalClose = document.querySelector(".modal__close");
-try {
-  setTimeout(() => {
-     try {
-       overlay.style.transitionDuration = "0.36s";
-       modal.style.transitionDuration = "0.36s";
-     } catch (error) {    
-     } 
-   }, 360);
-
-  heroBtn.addEventListener("click", () => {
-     try {
-       overlay.classList.add("overlay_open");
-       modal.classList.add("modal_open");
-
-       // When the modal is shown, we want a fixed body
-       document.body.style.position = "fixed";
-       document.body.style.top = `-${window.scrollY}px`;
-     } catch (error) {}
-   });
-
-   overlay.addEventListener("click", (event) => {
-     const target = event.target;
-
-     if (target === overlay || target.closest(".modal__close")) {
-       overlay.classList.remove("overlay_open");
-       modal.classList.remove("modal_open");
-
-       // When the modal is hidden, we want to remain at the top of the scroll position
-       const scrollY = document.body.style.top;
-       document.body.style.position = "";
-       document.body.style.top = "";
-       window.scrollTo(0, parseInt(scrollY || "0") * -1);
-     }
-   });
-} catch (error) {  
+const scrollController = {
+  scrollPosition: 0,
+  disabedScroll() {
+    scrollController.scrollPosition = window.scrollY;
+    document.body.style.cssText = `
+     overflow: hidden;
+      position: fixed;
+      top: -${scrollController.scrollPosition}px;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+    `;
+    document.documentElement.style.scrollBehavior = "unset";
+  },
+  enabledScroll() {
+    document.body.style.cssText = "";
+    window.scroll({ top: scrollController.scrollPosition });
+    document.documentElement.style.scrollBehavior = "";
+  }
 }
 
+
+const modalController = (time = 360) => {
+  const heroBtn = document.querySelector(".hero__btn");
+  const coursePriceBtn = document.querySelector(".course-price__btn");
+  let currentBtn;
+  // делаю проверку какая из конопок на странице
+  heroBtn ? (currentBtn = heroBtn) : (currentBtn = coursePriceBtn);
+
+  const modalOverlay = document.querySelector(".overlay");
+
+  modalOverlay.style.cssText = `
+display: flex;
+visibility: hidden;
+opacity: 0;
+transition: opacity ${time}ms ease-in-out;
+`;
+
+  const closeModal = (event) => {
+    const target = event.target;
+
+    if (
+      target === modalOverlay ||
+      target.closest(".modal__close") ||
+      event.code === "Escape"
+    ) {
+      modalOverlay.style.opacity = 0;
+
+      setTimeout(() => {
+        modalOverlay.style.visibility = "hidden";
+        scrollController.enabledScroll();
+      }, time);
+
+      window.removeEventListener("keydown", closeModal);
+    }
+  };
+
+  const openModal = () => {
+    modalOverlay.style.visibility = "visible";
+    modalOverlay.style.opacity = 1;
+    window.addEventListener("keydown", closeModal);
+    scrollController.disabedScroll();
+  };
+
+  currentBtn.addEventListener("click", openModal);
+
+  modalOverlay.addEventListener("click", closeModal);
+};
+modalController();

@@ -1,9 +1,5 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  /* что бы убрать горизонтальный скролл при добавлении карты */
-  /* position: relative;
-  overflow-x: hidden; */
 }
 
 
@@ -17,6 +13,7 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
+  scroll-behavior: smooth;
   font-family: "VantaLight", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -78,7 +75,7 @@ fieldset {
 
 
 .overlay {
-  display: flex;
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 900;
@@ -87,12 +84,4 @@ fieldset {
   overflow-y: auto;
   overflow-x: hidden;
   opacity: 0;
-  visibility: hidden;
-  transition-property: opacity, visibility;
-  transition-timing-function: ease-in-out;
-}
-
-.overlay_open {
-  opacity: 1;
-  visibility: visible;
 }
