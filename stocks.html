@@ -285,7 +285,39 @@
       <p class="footer__confidential">*Политика конфиденциальности</p>
     </div>
   </footer>
-
+  <div class="overlay">
+    <div class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title">Обратный звонок</h2>
+        <form class="modal__form">
+          <fieldset class="modal__person">
+            <label class="modal__label">
+              <input class="modal__input" type="text" name="name" placeholder="Ваше имя" required>
+            </label>
+            <label class="modal__label">
+              <input class="modal__input" type="tel" name="tel" placeholder="+7 (953) 812-12-77"
+                pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </label>
+  
+            <div class="modal__checkbox checkbox">
+              <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox" required>
+              <label class="checkbox__label" for="checkbox">
+                Заполняя форму на сайте, Вы соглашаетесь с нашей Политикой конфиденциальности
+              </label>
+            </div>
+          </fieldset>
+  
+          <button class="modal__order" type="submit">Заказать звонок</button>
+        </form>
+  
+        <button class="modal__close" type="button" aria-label="закрыть модальное окно">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 20L4 4M20 4L4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
