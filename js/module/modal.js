@@ -20,51 +20,55 @@ const scrollController = {
   }
 }
 
+try {
+  const modalController = (time = 360) => {
+    const heroBtn = document.querySelector(".hero__btn");
+    const coursePriceBtn = document.querySelector(".course-price__btn");
+    let currentBtn;
+    // делаю проверку какая из конопок на странице
+    heroBtn ? (currentBtn = heroBtn) : (currentBtn = coursePriceBtn);
 
-const modalController = (time = 360) => {
-  const heroBtn = document.querySelector(".hero__btn");
-  const coursePriceBtn = document.querySelector(".course-price__btn");
-  let currentBtn;
-  // делаю проверку какая из конопок на странице
-  heroBtn ? (currentBtn = heroBtn) : (currentBtn = coursePriceBtn);
+    const modalOverlay = document.querySelector(".overlay");
 
-  const modalOverlay = document.querySelector(".overlay");
-
-  modalOverlay.style.cssText = `
+    modalOverlay.style.cssText = `
 display: flex;
 visibility: hidden;
 opacity: 0;
 transition: opacity ${time}ms ease-in-out;
 `;
 
-  const closeModal = (event) => {
-    const target = event.target;
+    const closeModal = (event) => {
+      const target = event.target;
 
-    if (
-      target === modalOverlay ||
-      target.closest(".modal__close") ||
-      event.code === "Escape"
-    ) {
-      modalOverlay.style.opacity = 0;
+      if (
+        target === modalOverlay ||
+        target.closest(".modal__close") ||
+        event.code === "Escape"
+      ) {
+        modalOverlay.style.opacity = 0;
 
-      setTimeout(() => {
-        modalOverlay.style.visibility = "hidden";
-        scrollController.enabledScroll();
-      }, time);
+        setTimeout(() => {
+          modalOverlay.style.visibility = "hidden";
+          scrollController.enabledScroll();
+        }, time);
 
-      window.removeEventListener("keydown", closeModal);
-    }
+        window.removeEventListener("keydown", closeModal);
+      }
+    };
+
+    const openModal = () => {
+      modalOverlay.style.visibility = "visible";
+      modalOverlay.style.opacity = 1;
+      window.addEventListener("keydown", closeModal);
+      scrollController.disabedScroll();
+    };
+
+    currentBtn.addEventListener("click", openModal);
+
+    modalOverlay.addEventListener("click", closeModal);
   };
+  modalController();
 
-  const openModal = () => {
-    modalOverlay.style.visibility = "visible";
-    modalOverlay.style.opacity = 1;
-    window.addEventListener("keydown", closeModal);
-    scrollController.disabedScroll();
-  };
-
-  currentBtn.addEventListener("click", openModal);
-
-  modalOverlay.addEventListener("click", closeModal);
-};
-modalController();
+} catch (error) {
+  
+}
