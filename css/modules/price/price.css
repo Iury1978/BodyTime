@@ -121,6 +121,10 @@
   width: 712px;
 }
 
+.price__price {
+  white-space: nowrap;
+}
+
 .price__text {
   font-size: 16px;
   line-height: 130%;

@@ -1,0 +1,26 @@
+{
+  "name": "bodytime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iury1978/BodyTime.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iury1978/BodyTime/issues"
+  },
+  "homepage": "https://github.com/Iury1978/BodyTime#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-group-css-media-queries": "^1.2.2"
+  }
+}
