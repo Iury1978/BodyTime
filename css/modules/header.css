@@ -113,6 +113,12 @@
 
 }
 
+.header__address {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 /* .header__address {
   position: relative;
   font-size: 14px;
@@ -172,6 +178,17 @@
     gap: 1px 16px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  ..header__address {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .header__address {
+    gap: 10px;
+
   }
 
   .address__text {
